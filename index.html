@@ -1,0 +1,158 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Boda Noelia & Pablo | Octubre 2024</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body class="">
+    <svg width="0" height="0" style="position: absolute;">
+    <defs>
+        <filter id="grainy" x="0" y="0">
+        <feTurbulence type="feTurbulence" baseFrequency="20" />
+        </filter>
+    </defs>
+    </svg>
+
+    <div id="app" class="page-container min-h-screen grid grid-rows-[auto_1fr] grid-cols-12 bg-transparent">
+        <!-- Hero Section -->
+        <header class="header-layout sticky top-0 z-10 bg-transparent col-span-full">
+            <div class="header-main">
+                <a href="#" class="header-title">Noelia & Pablo</a>
+            </div>
+            <div class="header-nav">
+                <nav class="desktop-nav flex">
+                    <a href="#" class="px-2 hover:underline">Inicio</a>
+                    <a href="#countdown" class="px-2 hover:underline">Cuenta atrás</a>
+                    <a href="#" class="px-2 hover:underline">Detalles</a>
+                    <a href="#" class="px-2 hover:underline">Confirmación</a>
+                </nav>
+            </div>
+        </header>
+        
+        <div id="hero" class="row-span-full col-span-full flex items-center justify-center min-h-screen relative">
+            <!-- Start Section -->
+            <section id="start" class="text-center mx-4 grid-rows-6">
+                <div class="description-container text-center align-middle content-center">
+                    <div class="text mt-8">
+                    <p class="title">¡VEN A CELEBRARLO CON NOSOTROS!</p>
+                    <p class="date">11 OCTUBRE 2024</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+
+
+    <!-- Countdown Section -->
+    <div id="countdown" class="flex items-center justify-center min-h-screen">
+        <p class="title justify-center">¡YA CONTAMOS LOS DÍAS!</p>
+        <!-- Flip clock container -->
+    </div>
+
+    <script>
+        console.clear();
+        
+        function CountdownTracker(label, value){
+
+            var el = document.createElement('span');
+
+            el.className = 'flip-clock__piece';
+            el.innerHTML = '<b class="flip-clock__card card"><b class="card__top"></b><b class="card__bottom"></b><b class="card__back"><b class="card__bottom"></b></b></b>' + 
+            '<span class="flip-clock__slot">' + label + '</span>';
+
+            this.el = el;
+
+            var top = el.querySelector('.card__top'),
+                bottom = el.querySelector('.card__bottom'),
+                back = el.querySelector('.card__back'),
+                backBottom = el.querySelector('.card__back .card__bottom');
+
+            this.update = function(val){
+                val = ( '0' + val ).slice(-2);
+                if ( val !== this.currentValue ) {
+                
+                    if ( this.currentValue >= 0 ) {
+                        back.setAttribute('data-value', this.currentValue);
+                        bottom.setAttribute('data-value', this.currentValue);
+                    }
+                    this.currentValue = val;
+                    top.innerText = this.currentValue;
+                    backBottom.setAttribute('data-value', this.currentValue);
+
+                    this.el.classList.remove('flip');
+                    void this.el.offsetWidth;
+                    this.el.classList.add('flip');
+                }
+            }
+            
+            this.update(value);
+        }
+
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            return {
+                'Total': t,
+                'Días': Math.floor(t / (1000 * 60 * 60 * 24)),
+                'Horas': Math.floor((t / (1000 * 60 * 60)) % 24),
+                'Minutos': Math.floor((t / 1000 / 60) % 60),
+                'Segundos': Math.floor((t / 1000) % 60)
+            };
+        }
+
+        function Clock(countdown, callback) {
+        
+            countdown = countdown ? new Date(Date.parse(countdown)) : false;
+            callback = callback || function(){};
+        
+            var updateFn = countdown ? getTimeRemaining : function() { return getTimeRemaining(countdown); };
+
+            this.el = document.createElement('div');
+            this.el.className = 'flip-clock';
+
+            var trackers = {},
+                t = updateFn(countdown),
+                key, timeinterval;
+
+            for ( key in t ){
+                if ( key === 'Total' ) { continue; }
+                trackers[key] = new CountdownTracker(key, t[key]);
+                this.el.appendChild(trackers[key].el);
+            }
+
+            var i = 0;
+            function updateClock() {
+                timeinterval = requestAnimationFrame(updateClock);
+                
+                // throttle so it's not constantly updating the time.
+                if ( i++ % 10 ) { return; }
+                
+                var t = updateFn(countdown);
+                if ( t.Total < 0 ) {
+                    cancelAnimationFrame(timeinterval);
+                    for ( key in trackers ){
+                        trackers[key].update( 0 );
+                    }
+                    callback();
+                    return;
+                }
+                
+                for ( key in trackers ){
+                    trackers[key].update( t[key] );
+                }
+            }
+
+            setTimeout(updateClock,500);
+        }
+
+        var deadline = new Date('October 11, 2024 00:00:00');
+        var c = new Clock(deadline, function(){ alert('countdown complete') });
+        document.getElementById('countdown').appendChild(c.el);
+    </script>
+</body>
+</html>
