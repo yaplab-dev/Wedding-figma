@@ -98,9 +98,10 @@
 }
 
 /* Scroll */
-html{
+html {
     scroll-behavior: smooth;
 }
+
 /* Grainy Background for #hero */
 #hero::before, header::before {
     position: absolute;
@@ -126,20 +127,20 @@ header.scrolled {
 
 /* Base Styles */
 .page-container {
-    @apply grid min-h-screen grid-cols-12 grid-rows-[auto_1fr]
-    bg-transparent
-}
-#hero {
-    @apply row-span-full col-span-full grid grid-rows-[auto-auto] min-h-screen
+    @apply grid min-h-screen grid-cols-12 grid-rows-[auto_1fr] bg-transparent;
 }
 
-#hero{
+#hero {
+    @apply row-span-full col-span-full grid grid-rows-[auto-auto] min-h-screen;
+}
+
+#hero {
     background-image: url("../img/foto1.jpg");
     background-size: cover;
 }
 
-#countdown{
-    @apply bg-[#F2D6B3]
+#countdown {
+    @apply bg-[#F2D6B3];
 }
 
 /* Bigger styles */
@@ -176,9 +177,21 @@ main {
     margin-bottom: 2rem;
 }
 
+@media (max-width: 640px) {
+    .title {
+        @apply text-4xl;
+    }
+}
+
 .title1 {
     @apply text-[#6AB9D9] text-6xl font-telegraf text-center mt-0;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+    .title1 {
+        @apply text-4xl;
+    }
 }
 
 .date {
@@ -220,6 +233,12 @@ main {
 @media (max-width: 1024px) {
     .confirmation-container {
         @apply mx-4;
+    }
+}
+
+@media (max-width: 640px) {
+    .confirmation-container iframe {
+        height: 600px;
     }
 }
 
@@ -273,7 +292,7 @@ iframe {
     @apply ml-2;
 }
 
-#mas {
+p.mas {
     @apply text-4xl mb-8 text-cel-3;
 }
 

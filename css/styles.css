@@ -2125,6 +2125,11 @@ video {
   vertical-align: super;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -2706,7 +2711,7 @@ video {
 
 /* Scroll */
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -2866,6 +2871,13 @@ main {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 640px) {
+  .title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
 .title1 {
   margin-top: 0px;
   text-align: center;
@@ -2875,6 +2887,13 @@ main {
   --tw-text-opacity: 1;
   color: rgb(106 185 217 / var(--tw-text-opacity));
   margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .title1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 .date {
@@ -2958,6 +2977,12 @@ main {
   .confirmation-container {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .confirmation-container iframe {
+    height: 600px;
   }
 }
 
@@ -3056,7 +3081,7 @@ iframe {
   margin-left: 0.5rem;
 }
 
-#mas {
+p.mas {
   margin-bottom: 2rem;
   font-size: 2.25rem;
   line-height: 2.5rem;
