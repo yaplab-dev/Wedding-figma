@@ -2762,6 +2762,7 @@ header.scrolled {
   grid-template-rows: auto-auto;
   background-image: url("../img/foto1.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 #countdown {
@@ -3081,7 +3082,7 @@ iframe {
   margin-left: 0.5rem;
 }
 
-p.mas {
+#mas {
   margin-bottom: 2rem;
   font-size: 2.25rem;
   line-height: 2.5rem;

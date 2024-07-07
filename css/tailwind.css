@@ -137,6 +137,7 @@ header.scrolled {
 #hero {
     background-image: url("../img/foto1.jpg");
     background-size: cover;
+    background-position: center;
 }
 
 #countdown {
@@ -292,7 +293,7 @@ iframe {
     @apply ml-2;
 }
 
-p.mas {
+#mas {
     @apply text-4xl mb-8 text-cel-3;
 }
 
