@@ -3,6 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .header-title {
+        @apply text-2xl lg:text-5xl;
+    }
+
+    #menu-toggle {
+        @apply text-3xl;
+    }
+
+    #mobile-menu {
+        @apply lg:flex lg:items-center lg:space-x-4;
+    }
+
+    .desktop-nav a {
+        @apply block lg:inline-block px-2 py-2 lg:py-0;
+    }
+}
+
+/* Otros estilos personalizados */
+
 @layer utilities {
     .grain-bg {
         position: relative;
@@ -40,7 +60,7 @@
     font-weight: bold;
     src: url('../fonts/PPNikkeiPacific-Ultrabold.ttf');
     src: url('../fonts/PPNikkeiPacific-Ultrabold.woff2');
-    src: url('../fonts/PPNikkeiPacific-Ultrabold.woff')
+    src: url('../fonts/PPNikkeiPacific-Ultrabold.woff');
 }
 
 @font-face {
@@ -77,8 +97,6 @@
     url(../fonts/PPTelegraf-Regular.woff2);
 }
 
-
-
 /* Scroll */
 html{
     scroll-behavior: smooth;
@@ -106,7 +124,6 @@ header.scrolled {
     backdrop-filter: blur(5px); /* Añade un efecto de desenfoque para mejorar la legibilidad */
 }
 
-
 /* Base Styles */
 .page-container {
     @apply grid min-h-screen grid-cols-12 grid-rows-[auto_1fr]
@@ -127,48 +144,30 @@ header.scrolled {
 
 /* Bigger styles */
 .header-layout {
-    @apply grid grid-flow-row col-span-full 
-    row-span-1 h-24 overflow-hidden
-    bg-transparent pt-9 text-white content-center
-    fixed top-0 left-0 right-0 z-50 p-[10px]
+    @apply flex justify-between items-center h-24 bg-transparent pt-9 text-white fixed top-0 left-0 right-0 z-50 p-[10px];
 }
 
 main {
-    @apply bg-transparent col-span-full  mt-28 text-cream 
-    grid gap-4 grid-cols-4 mx-10 min-h-screen  row-span-full
+    @apply bg-transparent col-span-full mt-28 text-cream grid gap-4 grid-cols-4 mx-10 min-h-screen row-span-full;
 }
 
-
-/* Sections*/
-#start{
-    @apply bg-transparent grid gap-4
-    mx-10 min-h-full mb-14 
+/* Sections */
+#start {
+    @apply bg-transparent grid gap-4 mx-10 min-h-full mb-14;
 }
-
-
 
 /* <Header> divisions */
 .header-main {
-    @apply font-nohemi grid grid-flow-row gap-x-7 
-col-start-1 col-span-4 text-xl  justify-around
-}
-.header-nav {
-    @apply col-end-12 col-span-5 font-nohemi text-xl grid grid-flow-row 
-    justify-center content-end text-cel-3
+    @apply font-nohemi text-xl;
 }
 
+.header-nav {
+    @apply flex justify-end space-x-4 font-nohemi text-xl text-cel-3 hidden lg:flex;
+}
 
 /* .header-main objects */
 .header-title {
-    @apply col-span-1 col-start-1  text-wrap 
-    justify-self-end content-end font-nohemi-bold text-5xl 
-    text-cel-3
-}
-.header-current {
-    @apply col-span-1 col-start-2 text-wrap
-}
-.header-location {
-    @apply col-span-1 col-start-3 text-wrap 
+    @apply text-5xl text-cel-3;
 }
 
 /* <Main> divisions */
@@ -176,6 +175,7 @@ col-start-1 col-span-4 text-xl  justify-around
     @apply text-cel-3 text-6xl font-telegraf text-center mt-0;
     margin-bottom: 2rem;
 }
+
 .title1 {
     @apply text-[#6AB9D9] text-6xl font-telegraf text-center mt-0;
     margin-bottom: 2rem;
@@ -185,17 +185,19 @@ col-start-1 col-span-4 text-xl  justify-around
     @apply text-cel-3 text-3xl font-telegraf text-center mt-0;
 }
 
-.description-container{
-    @apply row-start-2
+.description-container {
+    @apply row-start-2;
 }
 
 /* Detalles */
 .details-container {
-    max-width: 800px;
-    background-color: #EBF5FB;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    text-align: center;
+    @apply max-w-3xl bg-[#EBF5FB] p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
+}
+
+@media (max-width: 1024px) {
+    .details-container {
+        @apply mx-4;
+    }
 }
 
 .details-container img {
@@ -212,11 +214,13 @@ col-start-1 col-span-4 text-xl  justify-around
 
 /* Confirmación */
 .confirmation-container {
-    max-width: 800px;
-    background-color: #f5e4d0;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    text-align: center;
+    @apply max-w-3xl bg-[#f5e4d0] p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
+}
+
+@media (max-width: 1024px) {
+    .confirmation-container {
+        @apply mx-4;
+    }
 }
 
 .form-container {
@@ -236,7 +240,13 @@ iframe {
 }
 
 .more-container {
-    @apply bg-[#EBF5FB] p-8 rounded-lg shadow-lg text-center max-w-3xl;
+    @apply max-w-3xl bg-[#EBF5FB] p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
+}
+
+@media (max-width: 1024px) {
+    .more-container {
+        @apply mx-4;
+    }
 }
 
 .more-container p {
@@ -263,16 +273,16 @@ iframe {
     @apply ml-2;
 }
 
-#mas{
-    @apply text-4xl mb-8 text-cel-3
+#mas {
+    @apply text-4xl mb-8 text-cel-3;
 }
 
-#esperamos{
-    @apply my-8 text-4xl justify-center
+#esperamos {
+    @apply my-8 text-4xl justify-center;
 }
 
-p{
-    @apply text-xl text-cel-3
+p {
+    @apply text-xl text-cel-3;
 }
 
 /* CUENTA ATRAS */
@@ -284,8 +294,8 @@ p{
 
 .flip-clock *,
 .flip-clock *:before,
-.flip-clock *:after { 
-    box-sizing: border-box; 
+.flip-clock *:after {
+    box-sizing: border-box;
 }
 
 .flip-clock__piece {
@@ -300,7 +310,7 @@ p{
 
 .card {
     display: block;
-    position: relative; 
+    position: relative;
     padding-bottom: 0.72em;
     font-size: 9vw;
     line-height: 0.95;
@@ -322,14 +332,14 @@ p{
     transform: translateZ(0);
 }
 
-.card__bottom { 
+.card__bottom {
     color: #6AB9D9; /* Color veraniego para los números */
     position: absolute;
     top: 50%;
     left: 0;
     border-top: solid 1px #6AB9D9; /* Borde del mismo color veraniego */
     background: #FFE5D9; /* Fondo claro y cálido */
-    border-radius: 0 0 0.15em 0.15em; 
+    border-radius: 0 0 0.15em 0.15em;
     pointer-events: none;
     overflow: hidden;
 }
@@ -400,7 +410,6 @@ p{
     }
 }
 
-
 /* Footer */
 .footer {
     @apply bg-[#c6d5e1] py-6;
@@ -451,8 +460,6 @@ p{
     opacity: 0.5; /* Adjust opacity as needed */
 }
 
-
-
 /* CSS for details background pattern container */
 #details-pattern-container {
     position: absolute;
@@ -474,7 +481,6 @@ p{
     position: relative;
     z-index: 2; /* Ensure content container is above the pattern */
 }
-
 
 /* CSS for confirmation background pattern container */
 #confirmation-pattern-container {
