@@ -293,7 +293,7 @@ iframe {
     @apply ml-2;
 }
 
-#mas {
+p.mas {
     @apply text-4xl mb-8 text-cel-3;
 }
 
