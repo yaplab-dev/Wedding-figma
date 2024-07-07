@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,11 +11,11 @@
 </head>
 <body class="">
     <svg width="0" height="0" style="position: absolute;">
-    <defs>
-        <filter id="grainy" x="0" y="0">
-        <feTurbulence type="feTurbulence" baseFrequency="20" />
-        </filter>
-    </defs>
+        <defs>
+            <filter id="grainy" x="0" y="0">
+                <feTurbulence type="feTurbulence" baseFrequency="20" />
+            </filter>
+        </defs>
     </svg>
 
     <div id="app" class="page-container min-h-screen grid grid-rows-[auto_1fr] grid-cols-12 bg-transparent">
@@ -29,8 +28,9 @@
                 <nav class="desktop-nav flex">
                     <a href="#" class="px-2 hover:underline">Inicio</a>
                     <a href="#countdown" class="px-2 hover:underline">Cuenta atrás</a>
-                    <a href="#" class="px-2 hover:underline">Detalles</a>
-                    <a href="#" class="px-2 hover:underline">Confirmación</a>
+                    <a href="#details" class="px-2 hover:underline">Detalles</a>
+                    <a href="#confirmation" class="px-2 hover:underline">Confirmación</a>
+                    <a href="#more" class="px-2 hover:underline">Más</a>
                 </nav>
             </div>
         </header>
@@ -47,13 +47,308 @@
         </div>
     </div>
     
+<!-- Countdown Section -->
+<div id="countdown" class="relative flex flex-col items-center justify-center min-h-screen bg-[#F2D6B3]">
+    <div id="countdown-pattern-container" class="absolute inset-0 overflow-hidden"></div>
+    <p class="title1 mb-8">¡YA CONTAMOS LOS DÍAS!</p>
+    <!-- Flip clock container -->
+</div>
 
-
-    <!-- Countdown Section -->
-    <div id="countdown" class="flex items-center justify-center min-h-screen">
-        <p class="title justify-center">¡YA CONTAMOS LOS DÍAS!</p>
-        <!-- Flip clock container -->
+<!-- Details Section -->
+<div id="details" class="relative flex flex-col items-center justify-center min-h-screen bg-[#c6d5e1] py-20">
+    <div id="details-pattern-container" class="absolute inset-0 overflow-hidden"></div>
+    <div class="details-container bg-[#8ed2d9] p-8 rounded-lg shadow-lg text-center max-w-3xl relative">
+        <h2 class="title mb-8">Detalles de la boda</h2>
+        <p class="text-lg mb-4"><strong>Lugar:</strong> Pazo Torres de Agrelo</p>
+        <p class="text-lg mb-4"><strong>Fecha:</strong> Viernes 11 de octubre de 2024 a las 17:30</p>
+        <img src="../img/map.jpg" alt="Mapa de ubicación" class="mb-8">
+        <div class="s123-module-contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.375278112141!2d-8.603215722894523!3d42.29185723940626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f7c698c827021%3A0xbb3228e07cc8f49!2sPazo%20Torres%20de%20Agrelo!5e0!3m2!1ses!2ses!4v1720362694091!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
+</div>
+
+
+<!-- Confirmation Section -->
+<div id="confirmation" class="relative flex flex-col items-center justify-center min-h-screen bg-[#F2D6B3] py-20">
+    <div id="confirmation-pattern-container" class="absolute inset-0 overflow-hidden"></div>
+    <div class="confirmation-container bg-[#FBEFF5] p-8 rounded-lg shadow-lg text-center max-w-3xl relative">
+        <h2 class="title mb-8">Confirmación de Asistencia</h2>
+        <p class="mb-8">¡ESTAMOS DESEANDO COMPARTIR NUESTRO DÍA CONTIGO!<br>Te agradeceríamos que nos confirmes tu asistencia en este formulario para poder organizar un banquete memorable. No olvides detallar si tú o tu acompañante tenéis alguna alergia o intolerancia<br>¡Muchas gracias!</p>
+        <div class="form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0o_hxIpu2JKJCJmxQUdi_8syTynTyZG8u1L1S71Hj1lDLHA/viewform?embedded=true" width="640" height="1050" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        </div>
+    </div>
+</div>
+
+
+<!-- Más Section -->
+<div id="more" class="relative flex flex-col items-center justify-center min-h-screen bg-[#c6d5e1] py-20">
+    <div id="more-pattern-container" class="absolute inset-0 overflow-hidden"></div>
+    <div class="more-container bg-[#8ed2d9] p-8 rounded-lg shadow-lg text-center max-w-3xl relative">
+        <p id="mas">Cualquier duda que os surja...</p>
+        <p>¡No nos la preguntéis, estamos muy ocupados organizando la boda!<br>Pero si queréis hablar de fiesta…</p>
+        
+        <div class="whatsapp-links mb-8">
+            <a href="https://wa.me/34626657978" class="whatsapp-link flex items-center text-[#075E54] text-xl no-underline mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"></path></svg>
+                <span>Noelia</span>
+            </a>
+            <a href="https://wa.me/34645028572" class="whatsapp-link flex items-center text-[#075E54] text-xl no-underline mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"></path></svg>
+                <span>Pablo</span>
+            </a>
+        </div>
+        
+        <p class="mb-8">¿Vuestro mejor regalo? ¡Nuestra futura casa, donde celebrar todos los aniversarios con vosotros!</p>
+        <img src="../img/foto2.jpg" alt="Foto de la casa" class="mt-4 rounded-lg">
+        <p id="esperamos">¡OS ESPERAMOS!</p>
+    </div>
+</div>
+
+
+
+<!--Script countdown-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('countdown-pattern-container');
+        const patternCount = 100; // Total number of patterns
+        const svgData = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22h1v-2h-1v-1a7.014 7.014 0 0 0-3.433-6.02c-.355-.21-.567-.547-.567-.901v-.158c0-.354.212-.691.566-.9A7.016 7.016 0 0 0 19 5V4h1V2H4v2h1v1a7.016 7.016 0 0 0 3.434 6.021c.354.209.566.545.566.9v.158c0 .354-.212.691-.566.9A7.016 7.016 0 0 0 5 19v1H4v2h15zM17 4v1a5.005 5.005 0 0 1-1.004 3H8.004A5.005 5.005 0 0 1 7 5V4h10zM9.45 14.702c.971-.574 1.55-1.554 1.55-2.623V12h2v.079c0 1.068.579 2.049 1.551 2.623A4.98 4.98 0 0 1 16.573 17H7.427a4.977 4.977 0 0 1 2.023-2.298z"></path></svg>';
+
+        const sectionHeight = container.clientHeight;
+        const sectionWidth = container.clientWidth;
+        const centerX = sectionWidth / 2;
+        const centerY = sectionHeight / 2;
+        const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
+
+        function calculateDensity(x, y) {
+            const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
+            return distance / maxDistance; // Density increases with distance from center
+        }
+
+        // Number of rows and columns for the grid
+        const numRows = Math.sqrt(patternCount);
+        const numCols = Math.sqrt(patternCount);
+        const cellHeight = sectionHeight / numRows;
+        const cellWidth = sectionWidth / numCols;
+
+        for (let row = 0; row < numRows; row++) {
+            for (let col = 0; col < numCols; col++) {
+                const pattern = document.createElement('div');
+                pattern.className = 'pattern-item';
+                pattern.innerHTML = svgData;
+
+                // Set random size and rotation
+                const size = Math.random() * 20 + 10; // Random size between 10px and 30px
+                const rotation = Math.random() * 360; // Random rotation
+
+                // Calculate position with a random offset within the grid cell
+                const x = col * cellWidth + Math.random() * cellWidth;
+                const y = row * cellHeight + Math.random() * cellHeight;
+
+                // Apply density check
+                const density = calculateDensity(x, y);
+                if (Math.random() > density) continue;
+
+                pattern.style.width = `${size}px`;
+                pattern.style.height = `${size}px`;
+                pattern.style.top = `${y}px`;
+                pattern.style.left = `${x}px`;
+                pattern.style.transform = `rotate(${rotation}deg)`;
+
+                container.appendChild(pattern);
+            }
+        }
+    });
+</script>
+
+<!-- Script details -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const detailsContainer = document.getElementById('details-pattern-container');
+        const patternCount = 200; // Increased total number of patterns
+        const svgData1 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.447 6.105-6-3a1 1 0 0 0-.895 0L9 5.882 3.447 3.105A1 1 0 0 0 2 4v13c0 .379.214.725.553.895l6 3a1 1 0 0 0 .895 0L15 18.118l5.553 2.776a.992.992 0 0 0 .972-.043c.295-.183.475-.504.475-.851V7c0-.379-.214-.725-.553-.895zM10 7.618l4-2v10.764l-4 2V7.618zm-6-2 4 2v10.764l-4-2V5.618zm16 12.764-4-2V5.618l4 2v10.764z"></path></svg>';
+        const svgData2 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path><path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path></svg>';
+
+        const sectionHeight = detailsContainer.clientHeight;
+        const sectionWidth = detailsContainer.clientWidth;
+        const centerX = sectionWidth / 2;
+        const centerY = sectionHeight / 2;
+        const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
+
+        function calculateDensity(x, y) {
+            const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
+            return distance / maxDistance; // Density increases with distance from center
+        }
+
+        // Number of rows and columns for the grid
+        const numRows = Math.sqrt(patternCount);
+        const numCols = Math.sqrt(patternCount);
+        const cellHeight = sectionHeight / numRows;
+        const cellWidth = sectionWidth / numCols;
+
+        for (let row = 0; row < numRows; row++) {
+            for (let col = 0; col < numCols; col++) {
+                const pattern = document.createElement('div');
+                pattern.className = 'pattern-item';
+                pattern.innerHTML = Math.random() > 0.5 ? svgData1 : svgData2;
+
+                // Set random size and rotation
+                const size = Math.random() * 20 + 10; // Random size between 10px and 30px
+                const rotation = Math.random() * 360; // Random rotation
+
+                // Calculate position with a random offset within the grid cell
+                const x = col * cellWidth + Math.random() * cellWidth;
+                const y = row * cellHeight + Math.random() * cellHeight;
+
+                // Apply density check
+                const density = calculateDensity(x, y);
+                if (Math.random() > density) continue;
+
+                pattern.style.width = `${size}px`;
+                pattern.style.height = `${size}px`;
+                pattern.style.top = `${y}px`;
+                pattern.style.left = `${x}px`;
+                pattern.style.transform = `rotate(${rotation}deg)`;
+
+                detailsContainer.appendChild(pattern);
+            }
+        }
+    });
+</script>
+
+<!--Script confirmation-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const confirmationContainer = document.getElementById('confirmation-pattern-container');
+        const patternCount = 200; // Total number of patterns
+        const svgData1 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a7 7 0 0 0-4.94 2l-7.78 7.82a1 1 0 0 0 0 1.41l3.54 3.54-3.54 3.53 1.42 1.42 3.53-3.54 3.54 3.54a1 1 0 0 0 1.41 0L20 13.94A7 7 0 0 0 15 2zm3.54 10.54-7.07 7.06-2.82-2.83-1.42-1.42-2.83-2.83 7.07-7.07a5 5 0 0 1 7.08 7.08z"></path></svg>';
+        const svgData2 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.993 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007S14.761 6.993 12 6.993 6.993 9.239 6.993 12zM12 8.993c1.658 0 3.007 1.349 3.007 3.007S13.658 15.007 12 15.007 8.993 13.658 8.993 12 10.342 8.993 12 8.993zM10.998 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2h-3zm17 0h3v2h-3zM4.219 18.363l2.12-2.122 1.415 1.414-2.12 2.122zM16.24 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.342 7.759 4.22 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg>';
+
+        const sectionHeight = confirmationContainer.clientHeight;
+        const sectionWidth = confirmationContainer.clientWidth;
+        const centerX = sectionWidth / 2;
+        const centerY = sectionHeight / 2;
+        const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
+
+        function calculateDensity(x, y) {
+            const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
+            return distance / maxDistance; // Density increases with distance from center
+        }
+
+        // Number of rows and columns for the grid
+        const numRows = Math.sqrt(patternCount);
+        const numCols = Math.sqrt(patternCount);
+        const cellHeight = sectionHeight / numRows;
+        const cellWidth = sectionWidth / numCols;
+
+        for (let row = 0; row < numRows; row++) {
+            for (let col = 0; col < numCols; col++) {
+                const pattern = document.createElement('div');
+                pattern.className = 'pattern-item';
+                const rand = Math.random();
+                if (rand < 0.5) {
+                    pattern.innerHTML = svgData1;
+                } else {
+                    pattern.innerHTML = svgData2;
+                }
+
+                // Set random size and rotation
+                const size = Math.random() * 20 + 10; // Random size between 10px and 30px
+                const rotation = Math.random() * 360; // Random rotation
+
+                // Calculate position with a random offset within the grid cell
+                const x = col * cellWidth + Math.random() * cellWidth;
+                const y = row * cellHeight + Math.random() * cellHeight;
+
+                // Apply density check
+                const density = calculateDensity(x, y);
+                if (Math.random() > density) continue;
+
+                pattern.style.width = `${size}px`;
+                pattern.style.height = `${size}px`;
+                pattern.style.top = `${y}px`;
+                pattern.style.left = `${x}px`;
+                pattern.style.transform = `rotate(${rotation}deg)`;
+
+                confirmationContainer.appendChild(pattern);
+            }
+        }
+    });
+</script>
+
+
+<!-- Script More-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const moreContainer = document.getElementById('more-pattern-container');
+        const patternCount = 200; // Total number of patterns
+        const svgData1 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4C9.243 4 7 6.243 7 9h2c0-1.654 1.346-3 3-3s3 1.346 3 3c0 1.069-.454 1.465-1.481 2.255-.382.294-.813.626-1.226 1.038C10.981 13.604 10.995 14.897 11 15v2h2v-2.009c0-.024.023-.601.707-1.284.32-.32.682-.598 1.031-.867C15.798 12.024 17 11.1 17 9c0-2.757-2.243-5-5-5zm-1 14h2v2h-2z"></path></svg>';
+        const svgData2 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 7h-1.209A4.92 4.92 0 0 0 19 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.404 3.085C11.407 3.57 10.269 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zm-4.5-3c.827 0 1.5.673 1.5 1.5C17 7 16.374 7 16 7h-2.478c.511-1.576 1.253-3 1.978-3zM7 5.5C7 4.673 7.673 4 8.5 4c.888 0 1.714 1.525 2.198 3H8c-.374 0-1 0-1-1.5zM4 9h7v2H4V9zm2 11v-7h5v7H6zm12 0h-5v-7h5v7zm-5-9V9.085L13.017 9H20l.001 2H13z"></path></svg>';
+
+        const sectionHeight = moreContainer.clientHeight;
+        const sectionWidth = moreContainer.clientWidth;
+        const centerX = sectionWidth / 2;
+        const centerY = sectionHeight / 2;
+        const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
+
+        function calculateDensity(x, y) {
+            const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
+            return distance / maxDistance; // Density increases with distance from center
+        }
+
+        // Number of rows and columns for the grid
+        const numRows = Math.sqrt(patternCount);
+        const numCols = Math.sqrt(patternCount);
+        const cellHeight = sectionHeight / numRows;
+        const cellWidth = sectionWidth / numCols;
+
+        for (let row = 0; row < numRows; row++) {
+            for (let col = 0; col < numCols; col++) {
+                const pattern = document.createElement('div');
+                pattern.className = 'pattern-item';
+                const rand = Math.random();
+                if (rand < 0.5) {
+                    pattern.innerHTML = svgData1;
+                } else {
+                    pattern.innerHTML = svgData2;
+                }
+
+                // Set random size and rotation
+                const size = Math.random() * 20 + 10; // Random size between 10px and 30px
+                const rotation = Math.random() * 360; // Random rotation
+
+                // Calculate position with a random offset within the grid cell
+                const x = col * cellWidth + Math.random() * cellWidth;
+                const y = row * cellHeight + Math.random() * cellHeight;
+
+                // Apply density check
+                const density = calculateDensity(x, y);
+                if (Math.random() > density) continue;
+
+                pattern.style.width = `${size}px`;
+                pattern.style.height = `${size}px`;
+                pattern.style.top = `${y}px`;
+                pattern.style.left = `${x}px`;
+                pattern.style.transform = `rotate(${rotation}deg)`;
+
+                moreContainer.appendChild(pattern);
+            }
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
 
     <script>
         console.clear();
@@ -154,5 +449,34 @@
         var c = new Clock(deadline, function(){ alert('countdown complete') });
         document.getElementById('countdown').appendChild(c.el);
     </script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+<!-- Footer Section -->
+<footer class="footer bg-[#c6d5e1] py-6">
+    <div class="footer-container flex flex-col items-center justify-center text-center">
+        <p class="mb-4">¡Esta web ha sido diseñada y desarrollada con cariño por Pablo Fonseca Silva para uso de los novios!</p>
+        <div class="footer-links flex space-x-4">
+            <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank" class="footer-link flex items-center text-[#0A66C2]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path></svg>
+                <span class="ml-2">LinkedIn</span>
+            </a>
+            <a href="https://github.com/tu-github" target="_blank" class="footer-link flex items-center text-[#333]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+                <span class="ml-2">GitHub</span>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
 </body>
 </html>
