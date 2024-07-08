@@ -618,6 +618,13 @@ video {
   }
 }
 
+@media (max-width: 480px) {
+  #mobile-menu {
+    background-color: rgb(217 217 217 / var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.5;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

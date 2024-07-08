@@ -16,10 +16,20 @@
         @apply lg:flex lg:items-center lg:space-x-4;
     }
 
+    @media (max-width: 480px) {
+        #mobile-menu {
+            @apply bg-cream bg-opacity-50
+        }
+    }
+
     .desktop-nav a {
         @apply block lg:inline-block px-2 py-2 lg:py-0;
     }
 }
+
+
+
+
 
 /* Otros estilos personalizados */
 
