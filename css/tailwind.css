@@ -571,3 +571,11 @@ p {
     position: relative;
     z-index: 2; /* Ensure content container is above the pattern */
 }
+
+
+/* Estilos para la imagen ampliada */
+.map-image {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
