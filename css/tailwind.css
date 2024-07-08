@@ -515,7 +515,7 @@ p {
 }
 
 #atr {
-    @apply text-xs mb-4 text-cel-3;
+    @apply text-xs mt-4 text-cel-3;
 }
 
 .footer-links {
