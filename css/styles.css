@@ -2834,7 +2834,7 @@ header.scrolled {
 
 @media (max-width: 480px) {
   #hero {
-    background-position: 60% 5%;
+    background-position: 70% 5%;
     /* Ajuste para pantallas muy pequeñas */
   }
 }
