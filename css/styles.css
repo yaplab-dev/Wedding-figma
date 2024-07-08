@@ -3239,7 +3239,7 @@ p {
   height: 0.72em;
   color: #2B5051;
   /* Color veraniego para los números */
-  background: #FFE5D9;
+  background: #fae2d7;
   /* Fondo claro y cálido */
   padding: 0.25em 0.25em;
   border-radius: 0.15em 0.15em 0 0;
@@ -3257,7 +3257,7 @@ p {
   left: 0;
   border-top: solid 1px #2B5051;
   /* Borde del mismo color veraniego */
-  background: #FFE5D9;
+  background: #fae2d7;
   /* Fondo claro y cálido */
   border-radius: 0 0 0.15em 0.15em;
   pointer-events: none;

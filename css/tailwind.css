@@ -413,7 +413,7 @@ p {
     display: block;
     height: 0.72em;
     color: #2B5051; /* Color veraniego para los números */
-    background: #FFE5D9; /* Fondo claro y cálido */
+    background: #fae2d7; /* Fondo claro y cálido */
     padding: 0.25em 0.25em;
     border-radius: 0.15em 0.15em 0 0;
     backface-visibility: hidden;
@@ -428,7 +428,7 @@ p {
     top: 50%;
     left: 0;
     border-top: solid 1px #2B5051; /* Borde del mismo color veraniego */
-    background: #FFE5D9; /* Fondo claro y cálido */
+    background: #fae2d7; /* Fondo claro y cálido */
     border-radius: 0 0 0.15em 0.15em;
     pointer-events: none;
     overflow: hidden;
