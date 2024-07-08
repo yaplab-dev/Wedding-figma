@@ -81,6 +81,22 @@
     url(../fonts/PPNeueMachina-InktrapMedium.woff),
     url(../fonts/PPNeueMachina-InktrapMedium.woff2);
 }
+@font-face {
+    font-family: 'hatton';
+    font-weight: normal;
+    font-display: swap;
+    src: url(../fonts/PPHatton-Medium.ttf),
+    url(../fonts/PPHatton-Medium.woff),
+    url(../fonts/PPHatton-Medium.woff2);
+}
+@font-face {
+    font-family: 'playground';
+    font-weight: normal;
+    font-display: swap;
+    src: url(../fonts/PPPlayground-Medium.ttf),
+    url(../fonts/PPPlayground-Medium.woff),
+    url(../fonts/PPPlayground-Medium.woff2);
+}
 
 @font-face {
     font-family: 'telegraf-slant';
@@ -196,11 +212,11 @@ main {
 
 /* <Header> divisions */
 .header-main {
-    @apply font-nohemi text-xl;
+    @apply font-hatton text-xl;
 }
 
 .header-nav {
-    @apply flex justify-end space-x-4 font-nohemi text-xl text-cel-3 hidden lg:flex;
+    @apply flex justify-end space-x-4 font-hatton text-xl text-cel-3 hidden lg:flex;
 }
 
 /* .header-main objects */
@@ -210,7 +226,7 @@ main {
 
 /* <Main> divisions */
 .title {
-    @apply text-cel-3 text-6xl font-telegraf text-center mt-0;
+    @apply text-cel-3 text-6xl font-hatton text-center mt-0;
     margin-bottom: 2rem;
 }
 
@@ -221,7 +237,7 @@ main {
 }
 
 .title1 {
-    @apply text-[#6AB9D9] text-6xl font-telegraf text-center mt-0;
+    @apply text-[#6AB9D9] text-6xl font-hatton text-center mt-0;
     margin-bottom: 2rem;
 }
 
@@ -232,7 +248,7 @@ main {
 }
 
 .date {
-    @apply text-cel-3 text-3xl font-telegraf text-center mt-0;
+    @apply text-cel-3 text-3xl font-hatton text-center mt-0;
 }
 
 .description-container {
@@ -318,7 +334,7 @@ iframe {
 }
 
 .whatsapp-link {
-    @apply flex items-center text-[#075E54] text-xl no-underline;
+    @apply flex items-center text-[#075E54] font-hatton text-xl no-underline;
 }
 
 .whatsapp-link svg {
@@ -330,11 +346,11 @@ iframe {
 }
 
 p.mas {
-    @apply text-4xl mb-8 text-cel-3;
+    @apply text-4xl font-hatton mb-8 text-cel-3;
 }
 
 #esperamos {
-    @apply my-8 text-4xl justify-center;
+    @apply my-8 font-hatton text-4xl justify-center;
 }
 
 p {
@@ -361,7 +377,8 @@ p {
 
 .flip-clock__slot {
     font-size: 3vw;
-    color: #6AB9D9; /* Color veraniego para los textos de los slots */
+    color: #6AB9D9;
+    @apply font-neue-machina /* Color veraniego para los textos de los slots */
 }
 
 .card {

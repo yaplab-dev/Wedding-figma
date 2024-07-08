@@ -2694,6 +2694,30 @@ video {
 }
 
 @font-face {
+  font-family: 'hatton';
+
+  font-weight: normal;
+
+  font-display: swap;
+
+  src: url(../fonts/PPHatton-Medium.ttf),
+    url(../fonts/PPHatton-Medium.woff),
+    url(../fonts/PPHatton-Medium.woff2);
+}
+
+@font-face {
+  font-family: 'playground';
+
+  font-weight: normal;
+
+  font-display: swap;
+
+  src: url(../fonts/PPPlayground-Medium.ttf),
+    url(../fonts/PPPlayground-Medium.woff),
+    url(../fonts/PPPlayground-Medium.woff2);
+}
+
+@font-face {
   font-family: 'telegraf-slant';
 
   font-weight: normal;
@@ -2860,7 +2884,7 @@ main {
 /* <Header> divisions */
 
 .header-main {
-  font-family: Nohemi, sans-serif;
+  font-family: Hatton, hatton;
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
@@ -2878,7 +2902,7 @@ main {
 }
 
 .header-nav {
-  font-family: Nohemi, sans-serif;
+  font-family: Hatton, hatton;
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
@@ -2905,7 +2929,7 @@ main {
 .title {
   margin-top: 0px;
   text-align: center;
-  font-family: Telegraf, sans-serif;
+  font-family: Hatton, hatton;
   font-size: 3.75rem;
   line-height: 1;
   --tw-text-opacity: 1;
@@ -2923,7 +2947,7 @@ main {
 .title1 {
   margin-top: 0px;
   text-align: center;
-  font-family: Telegraf, sans-serif;
+  font-family: Hatton, hatton;
   font-size: 3.75rem;
   line-height: 1;
   --tw-text-opacity: 1;
@@ -2941,7 +2965,7 @@ main {
 .date {
   margin-top: 0px;
   text-align: center;
-  font-family: Telegraf, sans-serif;
+  font-family: Hatton, hatton;
   font-size: 1.875rem;
   line-height: 2.25rem;
   --tw-text-opacity: 1;
@@ -3108,6 +3132,7 @@ iframe {
 .whatsapp-link {
   display: flex;
   align-items: center;
+  font-family: Hatton, hatton;
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
@@ -3125,6 +3150,7 @@ iframe {
 
 p.mas {
   margin-bottom: 2rem;
+  font-family: Hatton, hatton;
   font-size: 2.25rem;
   line-height: 2.5rem;
   --tw-text-opacity: 1;
@@ -3135,6 +3161,7 @@ p.mas {
   margin-top: 2rem;
   margin-bottom: 2rem;
   justify-content: center;
+  font-family: Hatton, hatton;
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
@@ -3168,7 +3195,7 @@ p {
 .flip-clock__slot {
   font-size: 3vw;
   color: #6AB9D9;
-  /* Color veraniego para los textos de los slots */
+  font-family: Neue-Machina, sans-serif
 }
 
 .card {

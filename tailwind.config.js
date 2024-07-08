@@ -38,6 +38,8 @@ module.exports = {
             'telegraf-slant': ['Telegraf-Slant', 'sans-serif'],
             'neue-machina': ['Neue-Machina', 'sans-serif'],
             'nohemi-bold': ['Nohemi-Bold', 'sans-serif'],
+            'hatton': ['Hatton', 'hatton'],
+            'playground': ['Playground', 'playground'],
             'nikkei-pacific': ['Nikei-Pacific', 'sans-serif']
         },
         extend: {
