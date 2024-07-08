@@ -1274,8 +1274,8 @@ video {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.grid-rows-6 {
-  grid-template-rows: repeat(6, minmax(0, 1fr));
+.grid-rows-8 {
+  grid-template-rows: repeat(8, minmax(0, 1fr));
 }
 
 .grid-rows-\[auto_1fr\] {
@@ -2759,9 +2759,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Background */
+
+body{
+  background-image: url('../img/waves1.jpg');
+  background-size: contain;
+}
+
 /* Grainy Background for #hero */
 
-#hero::before, header::before {
+#hero::before, header::before, footer::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -2796,6 +2803,8 @@ header.scrolled {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto 1fr;
   background-color: transparent;
+  background-image: url('../img/waves.jpg');
+  background-size: contain;
 }
 
 #hero {
@@ -2831,8 +2840,15 @@ header.scrolled {
 }
 
 #countdown {
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 214 179 / var(--tw-bg-opacity));
+  --tw-backdrop-blur: blur(64px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  background-image: url('../img/whitesand.jpg');
+  background-size: cover;
+}
+
+#confirmation {
+  background-color: transparent;
 }
 
 /* Bigger styles */
@@ -2933,7 +2949,7 @@ main {
   font-size: 3.75rem;
   line-height: 1;
   --tw-text-opacity: 1;
-  color: rgb(43 80 81 / var(--tw-text-opacity));
+  color: rgb(222 172 22 / var(--tw-text-opacity));
   margin-bottom: 2rem;
 }
 
@@ -2951,12 +2967,23 @@ main {
   font-size: 3.75rem;
   line-height: 1;
   --tw-text-opacity: 1;
-  color: rgb(106 185 217 / var(--tw-text-opacity));
+  color: rgb(43 80 81 / var(--tw-text-opacity));
+  margin-bottom: 2rem;
+}
+
+.title2 {
+  margin-top: 0px;
+  text-align: center;
+  font-family: Hatton, hatton;
+  font-size: 3.75rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(43 80 81 / var(--tw-text-opacity));
   margin-bottom: 2rem;
 }
 
 @media (max-width: 640px) {
-  .title1 {
+  .title1, .title2 {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
@@ -2982,8 +3009,8 @@ main {
   position: relative;
   max-width: 48rem;
   border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
   background-color: rgb(235 245 251 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.95;
   padding: 2rem;
   text-align: center;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -3023,8 +3050,8 @@ main {
   position: relative;
   max-width: 48rem;
   border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
   background-color: rgb(245 228 208 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.95;
   padding: 2rem;
   text-align: center;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -3071,8 +3098,6 @@ iframe {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  --tw-bg-opacity: 1;
-  background-color: rgb(198 213 225 / var(--tw-bg-opacity));
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -3081,8 +3106,8 @@ iframe {
   position: relative;
   max-width: 48rem;
   border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
   background-color: rgb(235 245 251 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.95;
   padding: 2rem;
   text-align: center;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -3194,7 +3219,7 @@ p {
 
 .flip-clock__slot {
   font-size: 3vw;
-  color: #6AB9D9;
+  color: #2B5051;
   font-family: Neue-Machina, sans-serif
 }
 
@@ -3212,7 +3237,7 @@ p {
 .card__back::after {
   display: block;
   height: 0.72em;
-  color: #6AB9D9;
+  color: #2B5051;
   /* Color veraniego para los números */
   background: #FFE5D9;
   /* Fondo claro y cálido */
@@ -3225,12 +3250,12 @@ p {
 }
 
 .card__bottom {
-  color: #6AB9D9;
+  color: #2B5051;
   /* Color veraniego para los números */
   position: absolute;
   top: 50%;
   left: 0;
-  border-top: solid 1px #6AB9D9;
+  border-top: solid 1px #2B5051;
   /* Borde del mismo color veraniego */
   background: #FFE5D9;
   /* Fondo claro y cálido */
@@ -3312,8 +3337,8 @@ p {
 /* Footer */
 
 .footer {
-  --tw-bg-opacity: 1;
-  background-color: rgb(198 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.6;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
@@ -3330,6 +3355,14 @@ p {
   margin-bottom: 1rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(43 80 81 / var(--tw-text-opacity));
+}
+
+#atr {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
   --tw-text-opacity: 1;
   color: rgb(43 80 81 / var(--tw-text-opacity));
 }
@@ -3386,6 +3419,14 @@ p {
 }
 
 /* CSS for details background pattern container */
+
+#details {
+  background-color: transparent;
+}
+
+#more {
+  background-color: transparent;
+}
 
 #details-pattern-container {
   position: absolute;

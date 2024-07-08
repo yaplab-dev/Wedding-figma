@@ -128,8 +128,14 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Background */
+body{
+    background-image: url('../img/waves1.jpg');
+    background-size: contain;
+}
+
 /* Grainy Background for #hero */
-#hero::before, header::before {
+#hero::before, header::before, footer::before {
     position: absolute;
     left: 0; top: 0;
     content: '';
@@ -154,6 +160,8 @@ header.scrolled {
 /* Base Styles */
 .page-container {
     @apply grid min-h-screen grid-cols-12 grid-rows-[auto_1fr] bg-transparent;
+    background-image: url('../img/waves.jpg');
+    background-size: contain;
 }
 
 #hero {
@@ -191,9 +199,14 @@ header.scrolled {
 }
 
 
-
 #countdown {
-    @apply bg-[#F2D6B3];
+    @apply backdrop-blur-3xl;
+    background-image: url('../img/whitesand.jpg');
+    background-size: cover;
+}
+
+#confirmation {
+    @apply bg-transparent;
 }
 
 /* Bigger styles */
@@ -226,7 +239,7 @@ main {
 
 /* <Main> divisions */
 .title {
-    @apply text-cel-3 text-6xl font-hatton text-center mt-0;
+    @apply text-[#deac16] text-6xl font-hatton text-center mt-0;
     margin-bottom: 2rem;
 }
 
@@ -237,12 +250,16 @@ main {
 }
 
 .title1 {
-    @apply text-[#6AB9D9] text-6xl font-hatton text-center mt-0;
+    @apply text-[#2B5051] text-6xl font-hatton text-center mt-0;
+    margin-bottom: 2rem;
+}
+.title2 {
+    @apply text-cel-3 text-6xl font-hatton text-center mt-0;
     margin-bottom: 2rem;
 }
 
 @media (max-width: 640px) {
-    .title1 {
+    .title1, .title2 {
         @apply text-4xl;
     }
 }
@@ -257,7 +274,7 @@ main {
 
 /* Detalles */
 .details-container {
-    @apply max-w-3xl bg-[#EBF5FB] p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
+    @apply max-w-3xl bg-[#EBF5FB] bg-opacity-95 p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
 }
 
 @media (max-width: 1024px) {
@@ -280,7 +297,7 @@ main {
 
 /* Confirmación */
 .confirmation-container {
-    @apply max-w-3xl bg-[#f5e4d0] p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
+    @apply max-w-3xl bg-[#f5e4d0] bg-opacity-95 p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
 }
 
 @media (max-width: 1024px) {
@@ -308,11 +325,11 @@ iframe {
 
 /* Más */
 #more {
-    @apply flex flex-col items-center justify-center min-h-screen bg-[#c6d5e1] py-20;
+    @apply flex flex-col items-center justify-center min-h-screen  py-20;
 }
 
 .more-container {
-    @apply max-w-3xl bg-[#EBF5FB] p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
+    @apply max-w-3xl bg-[#EBF5FB] bg-opacity-95 p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
 }
 
 @media (max-width: 1024px) {
@@ -377,7 +394,7 @@ p {
 
 .flip-clock__slot {
     font-size: 3vw;
-    color: #6AB9D9;
+    color: #2B5051;
     @apply font-neue-machina /* Color veraniego para los textos de los slots */
 }
 
@@ -395,7 +412,7 @@ p {
 .card__back::after {
     display: block;
     height: 0.72em;
-    color: #6AB9D9; /* Color veraniego para los números */
+    color: #2B5051; /* Color veraniego para los números */
     background: #FFE5D9; /* Fondo claro y cálido */
     padding: 0.25em 0.25em;
     border-radius: 0.15em 0.15em 0 0;
@@ -406,11 +423,11 @@ p {
 }
 
 .card__bottom {
-    color: #6AB9D9; /* Color veraniego para los números */
+    color: #2B5051; /* Color veraniego para los números */
     position: absolute;
     top: 50%;
     left: 0;
-    border-top: solid 1px #6AB9D9; /* Borde del mismo color veraniego */
+    border-top: solid 1px #2B5051; /* Borde del mismo color veraniego */
     background: #FFE5D9; /* Fondo claro y cálido */
     border-radius: 0 0 0.15em 0.15em;
     pointer-events: none;
@@ -485,7 +502,8 @@ p {
 
 /* Footer */
 .footer {
-    @apply bg-[#c6d5e1] py-6;
+    @apply bg-cream bg-opacity-60 py-6;
+    
 }
 
 .footer-container {
@@ -494,6 +512,10 @@ p {
 
 .footer p {
     @apply text-lg mb-4 text-cel-3;
+}
+
+#atr {
+    @apply text-xs mb-4 text-cel-3;
 }
 
 .footer-links {
@@ -525,6 +547,7 @@ p {
     height: 100%;
     pointer-events: none;
     z-index: 1;
+    
 }
 
 .pattern-item {
@@ -534,6 +557,13 @@ p {
 }
 
 /* CSS for details background pattern container */
+#details{
+@apply bg-transparent
+}
+#more{
+    @apply bg-transparent
+}
+
 #details-pattern-container {
     position: absolute;
     top: 0;
