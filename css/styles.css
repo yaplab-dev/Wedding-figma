@@ -2765,6 +2765,27 @@ header.scrolled {
   background-position: center;
 }
 
+@media (min-width: 1024px) {
+  #hero {
+    background-position: 50% 30%;
+    /* Ajuste para pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    background-position: 50% 10%;
+    /* Ajuste para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    background-position: 60% 5%;
+    /* Ajuste para pantallas muy pequeñas */
+  }
+}
+
 #countdown {
   --tw-bg-opacity: 1;
   background-color: rgb(242 214 179 / var(--tw-bg-opacity));
