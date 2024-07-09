@@ -2949,7 +2949,7 @@ main {
   font-size: 3.75rem;
   line-height: 1;
   --tw-text-opacity: 1;
-  color: rgb(222 172 22 / var(--tw-text-opacity));
+  color: rgb(189 142 0 / var(--tw-text-opacity));
   margin-bottom: 2rem;
 }
 
@@ -3353,8 +3353,8 @@ p {
 
 .footer p {
   margin-bottom: 1rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(43 80 81 / var(--tw-text-opacity));
 }

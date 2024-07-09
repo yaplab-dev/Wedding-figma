@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <link rel="icon" href="../img/foto1.jpg" type="image/jpeg">
+    <meta name="copyright" content="Copyright (c) 2024 by Shaw (https://codepen.io/shshaw/pen/vKzoLL) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.">
 </head>
 <body class="">
     <svg width="0" height="0" style="position: absolute;">
@@ -115,253 +116,12 @@
 
         <p class="mas">Lista de Bodas</p>
         <p class="mb-8">No hay mejor regalo que compartir una noche tan especial con vosotros, pero si queréis regalarnos algo más que vuestra hermosa presencia:</p>
-        <p class="mb-8"><strong>Número de cuenta:</strong> ES34 2100 5912 4102 0022 5218</p>
+        <p class="mb-8"><strong>Número de cuenta</strong><br> ES34 2100 5912 4102 0022 5218</p>
         
         <img src="img/foto2.jpg" alt="Esta imagen no puede visualizarse correctamente en tu navegador" class="mt-4 rounded-lg">
         <p id="esperamos">¡OS ESPERAMOS!</p>
     </div>
 </div>
-
-
-
-<!--
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const container = document.getElementById('countdown-pattern-container');
-        const patternCount = 100; // Total number of patterns
-        const svgData = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 22h1v-2h-1v-1a7.014 7.014 0 0 0-3.433-6.02c-.355-.21-.567-.547-.567-.901v-.158c0-.354.212-.691.566-.9A7.016 7.016 0 0 0 19 5V4h1V2H4v2h1v1a7.016 7.016 0 0 0 3.434 6.021c.354.209.566.545.566.9v.158c0 .354-.212.691-.566.9A7.016 7.016 0 0 0 5 19v1H4v2h15zM17 4v1a5.005 5.005 0 0 1-1.004 3H8.004A5.005 5.005 0 0 1 7 5V4h10zM9.45 14.702c.971-.574 1.55-1.554 1.55-2.623V12h2v.079c0 1.068.579 2.049 1.551 2.623A4.98 4.98 0 0 1 16.573 17H7.427a4.977 4.977 0 0 1 2.023-2.298z"></path></svg>';
-
-        const sectionHeight = container.clientHeight;
-        const sectionWidth = container.clientWidth;
-        const centerX = sectionWidth / 2;
-        const centerY = sectionHeight / 2;
-        const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
-
-        function calculateDensity(x, y) {
-            const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
-            return distance / maxDistance; // Density increases with distance from center
-        }
-
-        // Number of rows and columns for the grid
-        const numRows = Math.sqrt(patternCount);
-        const numCols = Math.sqrt(patternCount);
-        const cellHeight = sectionHeight / numRows;
-        const cellWidth = sectionWidth / numCols;
-
-        for (let row = 0; row < numRows; row++) {
-            for (let col = 0; col < numCols; col++) {
-                const pattern = document.createElement('div');
-                pattern.className = 'pattern-item';
-                pattern.innerHTML = svgData;
-
-                // Set random size and rotation
-                const size = Math.random() * 20 + 10; // Random size between 10px and 30px
-                const rotation = Math.random() * 360; // Random rotation
-
-                // Calculate position with a random offset within the grid cell
-                const x = col * cellWidth + Math.random() * cellWidth;
-                const y = row * cellHeight + Math.random() * cellHeight;
-
-                // Apply density check
-                const density = calculateDensity(x, y);
-                if (Math.random() > density) continue;
-
-                pattern.style.width = `${size}px`;
-                pattern.style.height = `${size}px`;
-                pattern.style.top = `${y}px`;
-                pattern.style.left = `${x}px`;
-                pattern.style.transform = `rotate(${rotation}deg)`;
-
-                container.appendChild(pattern);
-            }
-        }
-    });
-</script>
-
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const detailsContainer = document.getElementById('details-pattern-container');
-        const patternCount = 200; // Increased total number of patterns
-        const svgData1 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.447 6.105-6-3a1 1 0 0 0-.895 0L9 5.882 3.447 3.105A1 1 0 0 0 2 4v13c0 .379.214.725.553.895l6 3a1 1 0 0 0 .895 0L15 18.118l5.553 2.776a.992.992 0 0 0 .972-.043c.295-.183.475-.504.475-.851V7c0-.379-.214-.725-.553-.895zM10 7.618l4-2v10.764l-4 2V7.618zm-6-2 4 2v10.764l-4-2V5.618zm16 12.764-4-2V5.618l4 2v10.764z"></path></svg>';
-        const svgData2 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path><path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path></svg>';
-
-        const sectionHeight = detailsContainer.clientHeight;
-        const sectionWidth = detailsContainer.clientWidth;
-        const centerX = sectionWidth / 2;
-        const centerY = sectionHeight / 2;
-        const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
-
-        function calculateDensity(x, y) {
-            const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
-            return distance / maxDistance; // Density increases with distance from center
-        }
-
-        // Number of rows and columns for the grid
-        const numRows = Math.sqrt(patternCount);
-        const numCols = Math.sqrt(patternCount);
-        const cellHeight = sectionHeight / numRows;
-        const cellWidth = sectionWidth / numCols;
-
-        for (let row = 0; row < numRows; row++) {
-            for (let col = 0; col < numCols; col++) {
-                const pattern = document.createElement('div');
-                pattern.className = 'pattern-item';
-                pattern.innerHTML = Math.random() > 0.5 ? svgData1 : svgData2;
-
-                // Set random size and rotation
-                const size = Math.random() * 20 + 10; // Random size between 10px and 30px
-                const rotation = Math.random() * 360; // Random rotation
-
-                // Calculate position with a random offset within the grid cell
-                const x = col * cellWidth + Math.random() * cellWidth;
-                const y = row * cellHeight + Math.random() * cellHeight;
-
-                // Apply density check
-                const density = calculateDensity(x, y);
-                if (Math.random() > density) continue;
-
-                pattern.style.width = `${size}px`;
-                pattern.style.height = `${size}px`;
-                pattern.style.top = `${y}px`;
-                pattern.style.left = `${x}px`;
-                pattern.style.transform = `rotate(${rotation}deg)`;
-
-                detailsContainer.appendChild(pattern);
-            }
-        }
-    });
-</script>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const confirmationContainer = document.getElementById('confirmation-pattern-container');
-        const patternCount = 200; // Total number of patterns
-        const svgData1 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 2a7 7 0 0 0-4.94 2l-7.78 7.82a1 1 0 0 0 0 1.41l3.54 3.54-3.54 3.53 1.42 1.42 3.53-3.54 3.54 3.54a1 1 0 0 0 1.41 0L20 13.94A7 7 0 0 0 15 2zm3.54 10.54-7.07 7.06-2.82-2.83-1.42-1.42-2.83-2.83 7.07-7.07a5 5 0 0 1 7.08 7.08z"></path></svg>';
-        const svgData2 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.993 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007S14.761 6.993 12 6.993 6.993 9.239 6.993 12zM12 8.993c1.658 0 3.007 1.349 3.007 3.007S13.658 15.007 12 15.007 8.993 13.658 8.993 12 10.342 8.993 12 8.993zM10.998 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2h-3zm17 0h3v2h-3zM4.219 18.363l2.12-2.122 1.415 1.414-2.12 2.122zM16.24 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.342 7.759 4.22 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path></svg>';
-
-        const sectionHeight = confirmationContainer.clientHeight;
-        const sectionWidth = confirmationContainer.clientWidth;
-        const centerX = sectionWidth / 2;
-        const centerY = sectionHeight / 2;
-        const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
-
-        function calculateDensity(x, y) {
-            const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
-            return distance / maxDistance; // Density increases with distance from center
-        }
-
-        // Number of rows and columns for the grid
-        const numRows = Math.sqrt(patternCount);
-        const numCols = Math.sqrt(patternCount);
-        const cellHeight = sectionHeight / numRows;
-        const cellWidth = sectionWidth / numCols;
-
-        for (let row = 0; row < numRows; row++) {
-            for (let col = 0; col < numCols; col++) {
-                const pattern = document.createElement('div');
-                pattern.className = 'pattern-item';
-                const rand = Math.random();
-                if (rand < 0.5) {
-                    pattern.innerHTML = svgData1;
-                } else {
-                    pattern.innerHTML = svgData2;
-                }
-
-                // Set random size and rotation
-                const size = Math.random() * 20 + 10; // Random size between 10px and 30px
-                const rotation = Math.random() * 360; // Random rotation
-
-                // Calculate position with a random offset within the grid cell
-                const x = col * cellWidth + Math.random() * cellWidth;
-                const y = row * cellHeight + Math.random() * cellHeight;
-
-                // Apply density check
-                const density = calculateDensity(x, y);
-                if (Math.random() > density) continue;
-
-                pattern.style.width = `${size}px`;
-                pattern.style.height = `${size}px`;
-                pattern.style.top = `${y}px`;
-                pattern.style.left = `${x}px`;
-                pattern.style.transform = `rotate(${rotation}deg)`;
-
-                confirmationContainer.appendChild(pattern);
-            }
-        }
-    });
-</script>
-
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const moreContainer = document.getElementById('more-pattern-container');
-        const patternCount = 200; // Total number of patterns
-        const svgData1 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4C9.243 4 7 6.243 7 9h2c0-1.654 1.346-3 3-3s3 1.346 3 3c0 1.069-.454 1.465-1.481 2.255-.382.294-.813.626-1.226 1.038C10.981 13.604 10.995 14.897 11 15v2h2v-2.009c0-.024.023-.601.707-1.284.32-.32.682-.598 1.031-.867C15.798 12.024 17 11.1 17 9c0-2.757-2.243-5-5-5zm-1 14h2v2h-2z"></path></svg>';
-        const svgData2 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 7h-1.209A4.92 4.92 0 0 0 19 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.404 3.085C11.407 3.57 10.269 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zm-4.5-3c.827 0 1.5.673 1.5 1.5C17 7 16.374 7 16 7h-2.478c.511-1.576 1.253-3 1.978-3zM7 5.5C7 4.673 7.673 4 8.5 4c.888 0 1.714 1.525 2.198 3H8c-.374 0-1 0-1-1.5zM4 9h7v2H4V9zm2 11v-7h5v7H6zm12 0h-5v-7h5v7zm-5-9V9.085L13.017 9H20l.001 2H13z"></path></svg>';
-
-        const sectionHeight = moreContainer.clientHeight;
-        const sectionWidth = moreContainer.clientWidth;
-        const centerX = sectionWidth / 2;
-        const centerY = sectionHeight / 2;
-        const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
-
-        function calculateDensity(x, y) {
-            const distance = Math.sqrt(Math.pow(x - centerX, 2) + Math.pow(y - centerY, 2));
-            return distance / maxDistance; // Density increases with distance from center
-        }
-
-        // Number of rows and columns for the grid
-        const numRows = Math.sqrt(patternCount);
-        const numCols = Math.sqrt(patternCount);
-        const cellHeight = sectionHeight / numRows;
-        const cellWidth = sectionWidth / numCols;
-
-        for (let row = 0; row < numRows; row++) {
-            for (let col = 0; col < numCols; col++) {
-                const pattern = document.createElement('div');
-                pattern.className = 'pattern-item';
-                const rand = Math.random();
-                if (rand < 0.5) {
-                    pattern.innerHTML = svgData1;
-                } else {
-                    pattern.innerHTML = svgData2;
-                }
-
-                // Set random size and rotation
-                const size = Math.random() * 20 + 10; // Random size between 10px and 30px
-                const rotation = Math.random() * 360; // Random rotation
-
-                // Calculate position with a random offset within the grid cell
-                const x = col * cellWidth + Math.random() * cellWidth;
-                const y = row * cellHeight + Math.random() * cellHeight;
-
-                // Apply density check
-                const density = calculateDensity(x, y);
-                if (Math.random() > density) continue;
-
-                pattern.style.width = `${size}px`;
-                pattern.style.height = `${size}px`;
-                pattern.style.top = `${y}px`;
-                pattern.style.left = `${x}px`;
-                pattern.style.transform = `rotate(${rotation}deg)`;
-
-                moreContainer.appendChild(pattern);
-            }
-        }
-    });
-</script>
-
--->
-
-
-
-
 
 
 
@@ -526,15 +286,15 @@
         <p class="mb-4">¡Esta web ha sido diseñada y programada con cariño por Pablo Fonseca Silva para uso de los novios!</p>
                 <div class="footer-links flex space-x-4">
             <a href="https://www.linkedin.com/in/fonseca-silva" target="_blank" class="footer-link flex items-center text-[#0A66C2]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path></svg>
                 <span class="ml-2">LinkedIn</span>
             </a>
             <a href="https://github.com/yaplab-dev" target="_blank" class="footer-link flex items-center text-[#333]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
                 <span class="ml-2">GitHub</span>
             </a>
             <a href="mailto:contact.pablofonseca@gmail.com" target="_blank" class="footer-link flex items-center text-[#333]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path></svg>                <span class="ml-2">Contact</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"></path></svg>                <span class="ml-2">Contact</span>
             </a>
         </div>
         <p id="atr">Para el diseño de esta web han sido empleados dos recursos gráficos para construir elementos de fondo. A continuación se muestra la correcta atribución a los autores: <a href="https://www.freepik.com/free-photo/palm-leaf-shadow-sand-textured-background-with-copy-space_15599978.htm#from_view=detail_alsolike">Image by rawpixel.com on Freepik</a> <a href="https://www.freepik.com/free-vector/three-wave-patterns-hand-drawn-style_1110172.htm#fromView=search&page=1&position=21&uuid=cbd7728e-9d37-4b3e-b2f1-714f0f087495">Image by freepik</a></p>

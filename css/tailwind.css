@@ -239,7 +239,7 @@ main {
 
 /* <Main> divisions */
 .title {
-    @apply text-[#deac16] text-6xl font-hatton text-center mt-0;
+    @apply text-[#bd8e00] text-6xl font-hatton text-center mt-0;
     margin-bottom: 2rem;
 }
 
@@ -511,7 +511,7 @@ p {
 }
 
 .footer p {
-    @apply text-lg mb-4 text-cel-3;
+    @apply text-base mb-4 text-cel-3;
 }
 
 #atr {
