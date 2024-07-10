@@ -161,8 +161,6 @@ header.scrolled {
 /* Base Styles */
 .page-container {
     @apply grid min-h-screen grid-cols-12 grid-rows-[auto_1fr] bg-transparent;
-    background-image: url('../img/waves.jpg');
-    background-size: contain;
 }
 
 #hero {
@@ -202,8 +200,6 @@ header.scrolled {
 
 #countdown {
     @apply bg-transparent;
-   /* background-image: url('../img/whitesand.jpg');
-    background-size: cover;*/
 }
 
 #confirmation {
@@ -279,7 +275,7 @@ main {
 
 /* Detalles */
 .details-container {
-    @apply max-w-3xl bg-[#EBF5FB] bg-opacity-95 p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
+    @apply max-w-3xl bg-[#EBF5FB] bg-opacity-90 p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
 }
 
 @media (max-width: 1024px) {
@@ -302,7 +298,7 @@ main {
 
 /* Confirmación */
 .confirmation-container {
-    @apply max-w-3xl bg-[#f5e4d0] bg-opacity-95 p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
+    @apply max-w-3xl bg-[#EBF5FB] bg-opacity-90 p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
 }
 
 @media (max-width: 1024px) {
@@ -334,7 +330,7 @@ iframe {
 }
 
 .more-container {
-    @apply max-w-3xl bg-[#EBF5FB] bg-opacity-95 p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
+    @apply max-w-3xl bg-[#EBF5FB] bg-opacity-90 p-8 rounded-lg shadow-lg text-center relative lg:mx-20;
 }
 
 @media (max-width: 1024px) {
@@ -418,7 +414,7 @@ p {
     display: block;
     height: 0.72em;
     color: #2B5051; /* Color veraniego para los números */
-    background: #fae2d7; /* Fondo claro y cálido */
+    background: #EBF5FB; /* Fondo claro y cálido */
     padding: 0.25em 0.25em;
     border-radius: 0.15em 0.15em 0 0;
     backface-visibility: hidden;
@@ -433,7 +429,7 @@ p {
     top: 50%;
     left: 0;
     border-top: solid 1px #2B5051; /* Borde del mismo color veraniego */
-    background: #fae2d7; /* Fondo claro y cálido */
+    background: #EBF5FB; /* Fondo claro y cálido */
     border-radius: 0 0 0.15em 0.15em;
     pointer-events: none;
     overflow: hidden;

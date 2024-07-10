@@ -777,6 +777,10 @@ video {
   margin-right: 1rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -787,6 +791,10 @@ video {
 
 .ml-2 {
   margin-left: 0.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-2 {
@@ -2808,8 +2816,6 @@ header.scrolled {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: auto 1fr;
   background-color: transparent;
-  background-image: url('../img/waves.jpg');
-  background-size: contain;
 }
 
 #hero {
@@ -2846,8 +2852,6 @@ header.scrolled {
 
 #countdown {
   background-color: transparent;
-  /* background-image: url('../img/whitesand.jpg');
-    background-size: cover;*/
 }
 
 #confirmation {
@@ -3020,7 +3024,7 @@ main {
   max-width: 48rem;
   border-radius: 0.5rem;
   background-color: rgb(235 245 251 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.95;
+  --tw-bg-opacity: 0.9;
   padding: 2rem;
   text-align: center;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -3060,8 +3064,8 @@ main {
   position: relative;
   max-width: 48rem;
   border-radius: 0.5rem;
-  background-color: rgb(245 228 208 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.95;
+  background-color: rgb(235 245 251 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.9;
   padding: 2rem;
   text-align: center;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -3117,7 +3121,7 @@ iframe {
   max-width: 48rem;
   border-radius: 0.5rem;
   background-color: rgb(235 245 251 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.95;
+  --tw-bg-opacity: 0.9;
   padding: 2rem;
   text-align: center;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -3249,7 +3253,7 @@ p {
   height: 0.72em;
   color: #2B5051;
   /* Color veraniego para los números */
-  background: #fae2d7;
+  background: #EBF5FB;
   /* Fondo claro y cálido */
   padding: 0.25em 0.25em;
   border-radius: 0.15em 0.15em 0 0;
@@ -3267,7 +3271,7 @@ p {
   left: 0;
   border-top: solid 1px #2B5051;
   /* Borde del mismo color veraniego */
-  background: #fae2d7;
+  background: #EBF5FB;
   /* Fondo claro y cálido */
   border-radius: 0 0 0.15em 0.15em;
   pointer-events: none;
