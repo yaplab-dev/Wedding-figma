@@ -924,6 +924,14 @@ video {
   height: 100vh;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -942,6 +950,14 @@ video {
 
 .w-\[weird-and-invalid\] {
   width: weird-and-invalid;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .max-w-3xl {
@@ -2875,6 +2891,12 @@ header.scrolled {
   padding-top: 2.25rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media{
+  .header-layout {
+    margin-top: -0.75rem;
+  }
 }
 
 main {
