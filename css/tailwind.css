@@ -130,8 +130,9 @@ html {
 
 /* Background */
 body{
-    background-image: url('../img/waves1.jpg');
+    background-image: url('../img/whitesand.jpg'), linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.3));
     background-size: contain;
+    background-blend-mode: overlay;
 }
 
 /* Grainy Background for #hero */
@@ -200,9 +201,9 @@ header.scrolled {
 
 
 #countdown {
-    @apply backdrop-blur-3xl;
-    background-image: url('../img/whitesand.jpg');
-    background-size: cover;
+    @apply bg-transparent;
+   /* background-image: url('../img/whitesand.jpg');
+    background-size: cover;*/
 }
 
 #confirmation {
@@ -236,6 +237,10 @@ main {
 .header-title {
     @apply text-5xl text-cel-3;
 }
+@media (max-width: 640px) {
+    .header-title {@apply text-4xl;
+    }
+}
 
 /* <Main> divisions */
 .title {
@@ -245,7 +250,7 @@ main {
 
 @media (max-width: 640px) {
     .title {
-        @apply text-4xl;
+        @apply text-2xl;
     }
 }
 
@@ -547,7 +552,7 @@ p {
     height: 100%;
     pointer-events: none;
     z-index: 1;
-    
+    background-color: transparent;
 }
 
 .pattern-item {
