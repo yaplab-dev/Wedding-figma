@@ -246,7 +246,7 @@ main {
 
 @media (max-width: 640px) {
     .title {
-        @apply text-xl;
+        @apply text-xl -mt-2;
     }
 }
 
