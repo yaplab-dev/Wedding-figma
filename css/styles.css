@@ -2949,8 +2949,11 @@ main {
 
 @media (max-width: 640px) {
   .header-title {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    margin-left: 1rem;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -2969,8 +2972,8 @@ main {
 
 @media (max-width: 640px) {
   .title {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 

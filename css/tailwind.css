@@ -234,7 +234,7 @@ main {
     @apply text-5xl text-cel-3;
 }
 @media (max-width: 640px) {
-    .header-title {@apply text-4xl;
+    .header-title {@apply text-xl text-center ml-4 justify-center;
     }
 }
 
@@ -246,7 +246,7 @@ main {
 
 @media (max-width: 640px) {
     .title {
-        @apply text-2xl;
+        @apply text-xl;
     }
 }
 
